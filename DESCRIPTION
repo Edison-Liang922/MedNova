@@ -1,0 +1,45 @@
+Package: MedNova
+Title: Medical Research Workflow Planning and Script Generation
+Version: 1.0.0
+Authors@R: 
+    person("Edison", "Liang", email = "maintainer@example.com",
+           role = c("aut", "cre"))
+Description: Provides a medical research analysis platform for configuring
+    task inputs, reviewing workflow recommendations, and generating runnable R
+    scripts for a focused set of study scenarios. The package only generates
+    code and does not run analyses automatically.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+URL: https://example.com/MedNova
+Suggests:
+    bslib,
+    dcurves,
+    DT,
+    doParallel,
+    dplyr,
+    forcats,
+    ggrepel,
+    ggplot2,
+    gtsummary,
+    ieugwasr,
+    limma,
+    MatchIt,
+    openxlsx,
+    pROC,
+    RColorBrewer,
+    rlang,
+    rms,
+    scales,
+    shiny,
+    survival,
+    testthat (>= 3.0.0),
+    tidyr,
+    TwoSampleMR,
+    readxl,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3

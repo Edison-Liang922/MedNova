@@ -1,0 +1,14 @@
+pandoc: 3.8.3
+pkgdown: 2.2.0.9000
+pkgdown_sha: f3ec6e2bb122e10436eccda7b221e297ab9d395a
+articles:
+  mednova-capabilities: mednova-capabilities.html
+  mednova-cases: mednova-cases.html
+  mednova-docs-center: mednova-docs-center.html
+  mednova-faq: mednova-faq.html
+  mednova-quickstart: mednova-quickstart.html
+  mednova-studio: mednova-studio.html
+last_built: 2026-03-22T04:35Z
+urls:
+  reference: https://example.com/MedNova/reference
+  article: https://example.com/MedNova/articles

@@ -1,0 +1,16 @@
+.DS_Store
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user
+.Rproj.user/
+.env
+.env.*
+rsconnect/
+.codex/
+_reference/
+__MACOSX/
+*.log
+*.Rcheck/
+*.tar.gz
+AGENTS.md

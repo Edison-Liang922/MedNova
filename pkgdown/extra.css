@@ -1,0 +1,488 @@
+body.template-home main {
+  background:
+    radial-gradient(circle at top left, rgba(15, 122, 135, 0.08), transparent 24%),
+    radial-gradient(circle at top right, rgba(17, 66, 95, 0.08), transparent 26%),
+    #f7fbfd;
+}
+
+body,
+.navbar,
+.page-header,
+.pkgdown-footer-left,
+.pkgdown-footer-right {
+  font-family: "IBM Plex Sans", "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+}
+
+.navbar {
+  box-shadow: 0 12px 30px rgba(17, 52, 76, 0.06);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+  min-height: 4.75rem;
+}
+
+.navbar .navbar-brand {
+  margin-right: 0 !important;
+  font-size: 1.55rem;
+  font-weight: 780;
+  letter-spacing: 0.02em;
+}
+
+.navbar .nav-text {
+  margin-right: 1.2rem !important;
+  padding: 0.18rem 0.56rem;
+  border-radius: 999px;
+  border: 1px solid rgba(17, 66, 95, 0.10);
+  background: rgba(15, 122, 135, 0.08);
+  color: #6a8393 !important;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.navbar .navbar-collapse {
+  margin-left: 0 !important;
+}
+
+.navbar .navbar-nav.me-auto {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.navbar .nav-link,
+.navbar .dropdown-item,
+.navbar .dropdown-toggle {
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.navbar .nav-link,
+.navbar .dropdown-toggle {
+  padding: 0.62rem 0.9rem !important;
+  border-radius: 999px;
+}
+
+.navbar .dropdown-header {
+  padding: 0;
+  margin-right: 0.15rem;
+}
+
+.navbar .dropdown-header a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.62rem 0.9rem;
+  border-radius: 999px;
+  color: rgba(33, 62, 82, 0.86);
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.navbar .dropdown-header a:hover,
+.navbar .dropdown-header a:focus {
+  background: rgba(15, 122, 135, 0.08);
+  color: #103a57;
+  text-decoration: none;
+}
+
+.navbar .nav-link[href$="mednova-studio.html"],
+.navbar .dropdown-item[href$="mednova-studio.html"] {
+  font-size: 0;
+}
+
+.navbar .nav-link[href$="mednova-studio.html"]::after,
+.navbar .dropdown-item[href$="mednova-studio.html"]::after {
+  content: "Studio";
+  font-size: 0.94rem;
+}
+
+.navbar .form-inline {
+  margin-left: 0.75rem;
+}
+
+.navbar #search-input {
+  min-width: 13rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.template-home main,
+.template-article main,
+.template-article-index main,
+.template-reference main,
+.template-citation-authors main {
+  padding-top: 1rem;
+}
+
+.container.template-home,
+.container.template-article,
+.container.template-article-index,
+.container.template-reference,
+.container.template-citation-authors {
+  padding-top: 2.2rem;
+}
+
+.page-header {
+  margin-bottom: 1.8rem;
+}
+
+.pkgdown-footer-left {
+  display: none;
+}
+
+.mednova-hero {
+  margin: 1.2rem 0 2.4rem;
+  padding: 2.7rem 2.4rem;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.14), transparent 26%),
+    linear-gradient(135deg, #0b6572, #123f63 58%, #102d48);
+  color: #ffffff;
+  box-shadow: 0 24px 54px rgba(13, 48, 74, 0.18);
+}
+
+.mednova-hero h1 {
+  margin: 0.28rem 0 0.6rem;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.mednova-hero__eyebrow,
+.mednova-showcase__eyebrow,
+.mednova-bottom-cta__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.82rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.mednova-hero__subtitle {
+  max-width: 920px;
+  margin: 0 0 0.75rem;
+  font-size: 1.28rem;
+  line-height: 1.6;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.mednova-hero__lead {
+  max-width: 900px;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.78;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.mednova-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.mednova-cta-group .btn {
+  border-radius: 999px;
+  padding: 0.82rem 1.35rem;
+  font-weight: 700;
+}
+
+.mednova-card-grid,
+.mednova-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.mednova-card-grid--value {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mednova-card,
+.mednova-entry-card {
+  display: block;
+  padding: 1.25rem 1.15rem;
+  border-radius: 20px;
+  border: 1px solid rgba(17, 66, 95, 0.09);
+  background: linear-gradient(180deg, #ffffff, #f8fbfd);
+  box-shadow: 0 12px 28px rgba(20, 55, 82, 0.07);
+  text-decoration: none;
+}
+
+.mednova-card h3,
+.mednova-entry-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.55rem;
+  font-size: 1.08rem;
+  color: #113e5c;
+}
+
+.mednova-card p,
+.mednova-entry-card p {
+  margin: 0;
+  color: #4e6777;
+  line-height: 1.7;
+}
+
+.mednova-entry-card:hover {
+  border-color: rgba(15, 122, 135, 0.18);
+  transform: translateY(-2px);
+}
+
+.mednova-card-grid--structure {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.mednova-flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2.2rem;
+}
+
+.mednova-step {
+  position: relative;
+  padding: 1.2rem 1rem 1.05rem;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #edf7fa, #f7fbfd);
+  border: 1px solid rgba(15, 122, 135, 0.10);
+}
+
+.mednova-step h3 {
+  margin: 0.65rem 0 0.45rem;
+  font-size: 1rem;
+  color: #113e5c;
+}
+
+.mednova-step p {
+  margin: 0;
+  color: #506d7e;
+  line-height: 1.65;
+}
+
+.mednova-step__index {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0f7a87, #15648d);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.mednova-showcase,
+.mednova-bottom-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
+  gap: 1.3rem;
+  align-items: center;
+  margin: 1rem 0 2.4rem;
+  padding: 1.6rem;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #ffffff, #f7fbfd);
+  border: 1px solid rgba(17, 66, 95, 0.08);
+  box-shadow: 0 14px 34px rgba(20, 55, 82, 0.07);
+}
+
+.mednova-showcase__content h2,
+.mednova-bottom-cta h2 {
+  margin: 0.8rem 0 0.7rem;
+  color: #113e5c;
+}
+
+.mednova-showcase__content p,
+.mednova-bottom-cta p {
+  color: #526e7e;
+  line-height: 1.8;
+}
+
+.mednova-feature-list {
+  margin: 1rem 0 0;
+  padding-left: 1.1rem;
+  color: #415f72;
+}
+
+.mednova-feature-list li {
+  margin-bottom: 0.45rem;
+}
+
+.mednova-showcase__mockup {
+  min-width: 0;
+}
+
+.mednova-browser {
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(14, 38, 57, 0.16);
+  background: #102433;
+  box-shadow: 0 20px 46px rgba(14, 34, 50, 0.18);
+}
+
+.mednova-browser__bar {
+  display: flex;
+  gap: 0.45rem;
+  padding: 0.85rem 1rem;
+  background: #0b1c28;
+}
+
+.mednova-browser__bar span {
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.mednova-browser__bar span:nth-child(1) { background: #ff6b6b; }
+.mednova-browser__bar span:nth-child(2) { background: #f9c74f; }
+.mednova-browser__bar span:nth-child(3) { background: #43aa8b; }
+
+.mednova-browser__body {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  min-height: 360px;
+}
+
+.mednova-browser__sidebar {
+  padding: 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.mednova-browser__block {
+  height: 1rem;
+  margin-bottom: 0.85rem;
+  border-radius: 999px;
+  background: rgba(177, 212, 229, 0.18);
+}
+
+.mednova-browser__block--title {
+  width: 72%;
+  height: 1.1rem;
+  background: rgba(215, 237, 245, 0.38);
+}
+
+.mednova-browser__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.05rem;
+}
+
+.mednova-browser__chips span {
+  width: 4.2rem;
+  height: 1.5rem;
+  border-radius: 999px;
+  background: rgba(102, 194, 208, 0.26);
+}
+
+.mednova-browser__main {
+  display: grid;
+  grid-template-rows: 1fr 1.2fr;
+  gap: 0.9rem;
+  padding: 1rem;
+}
+
+.mednova-browser__panel {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mednova-browser__panel--info {
+  background: linear-gradient(180deg, rgba(239, 247, 250, 0.96), rgba(247, 252, 253, 0.96));
+}
+
+.mednova-browser__panel--code {
+  background: #152c3e;
+}
+
+.mednova-browser__tabs {
+  display: flex;
+  gap: 0.55rem;
+  padding: 0.85rem 0.95rem 0.4rem;
+}
+
+.mednova-browser__tabs span {
+  width: 4.8rem;
+  height: 1.7rem;
+  border-radius: 999px;
+  background: rgba(15, 122, 135, 0.14);
+}
+
+.mednova-browser__lines {
+  padding: 0.4rem 0.95rem 1rem;
+}
+
+.mednova-browser__lines i,
+.mednova-browser__code i,
+.mednova-browser__codebar {
+  display: block;
+  border-radius: 999px;
+}
+
+.mednova-browser__lines i {
+  height: 0.8rem;
+  margin-bottom: 0.65rem;
+  background: rgba(30, 76, 102, 0.12);
+}
+
+.mednova-browser__codebar {
+  height: 2.2rem;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.mednova-browser__code {
+  padding: 1rem;
+}
+
+.mednova-browser__code i {
+  height: 0.78rem;
+  margin-bottom: 0.68rem;
+  background: rgba(155, 203, 229, 0.22);
+}
+
+.mednova-bottom-cta {
+  background:
+    radial-gradient(circle at right top, rgba(255, 255, 255, 0.12), transparent 26%),
+    linear-gradient(135deg, #0f6c78, #144767 64%, #113450);
+  color: #ffffff;
+}
+
+.mednova-bottom-cta h2,
+.mednova-bottom-cta p {
+  color: #ffffff;
+}
+
+.mednova-bottom-cta p {
+  opacity: 0.88;
+}
+
+@media (max-width: 992px) {
+  .mednova-card-grid--value {
+    grid-template-columns: 1fr;
+  }
+
+  .mednova-showcase,
+  .mednova-bottom-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .mednova-browser__body {
+    grid-template-columns: 1fr;
+  }
+
+  .mednova-browser__sidebar {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+}

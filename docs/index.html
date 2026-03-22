@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MedNova | 面向医学研究任务的智能分析平台</title>
+<meta name="description" content="MedNova 将用户数据、任务目标与列配置转换为流程说明、函数说明与可执行 R 脚本。">
+<meta property="og:title" content="MedNova">
+<meta property="og:description" content="面向医学研究任务的智能分析平台">
+<meta property="og:type" content="website">
+<link rel="icon" href="link.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="landing-page">
+  <header class="site-header"><div class="shell site-header__inner">
+      <div class="brand-group">
+        <a class="brand" href="index.html" aria-label="MedNova 首页">MedNova</a>
+        <span class="version-tag" aria-label="版本 1.0.0">v1.0.0</span>
+      </div>
+      <nav class="site-nav" aria-label="站点导航"><a class="is-active" href="index.html">首页</a>
+        <a href="articles/mednova-studio.html">Studio</a>
+        <a href="articles/mednova-docs-center.html">文档中心</a>
+        <a href="articles/mednova-cases.html">教程案例</a>
+        <a href="articles/mednova-faq.html">FAQ</a>
+      </nav>
+</div>
+  </header><main><section class="hero"><div class="shell hero__inner">
+        <div class="hero__content">
+          <span class="eyebrow">MedNova Platform</span>
+          
+          <p class="hero__subtitle">面向医学研究任务的智能分析平台</p>
+          <p class="hero__lead">
+            将用户数据、任务目标与列配置转换为流程说明、函数说明与可执行 R 脚本。
+          </p>
+          <div class="button-row">
+            <a class="button button--primary" href="articles/mednova-studio.html">进入 Studio</a>
+            <a class="button button--ghost" href="articles/mednova-docs-center.html">查看文档中心</a>
+            <a class="button button--ghost" href="articles/mednova-cases.html">浏览教程案例</a>
+          </div>
+          <div class="hero__meta">
+            <div class="metric-card">
+              <strong>6 类任务</strong>
+              <span>覆盖 PSM、Logistic、Cox、差异表达、MR 与诊断模型。</span>
+            </div>
+            <div class="metric-card">
+              <strong>统一入口</strong>
+              <span>优先使用 `med_*` 主接口生成脚本，不把底层函数直接推到前台。</span>
+            </div>
+            <div class="metric-card">
+              <strong>只生成代码</strong>
+              <span>平台输出流程说明、函数要求与 R 脚本，不自动执行分析。</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__panel">
+          <div class="hero-panel">
+            <div class="hero-panel__header">
+              <span>Platform Snapshot</span>
+              <span>v1.0</span>
+            </div>
+            <div class="hero-panel__body">
+              <div class="hero-panel__chip-row">
+                <span>任务配置</span>
+                <span>函数输入</span>
+                <span>R 脚本生成</span>
+              </div>
+              <div class="hero-panel__grid">
+                <article class="hero-panel__card"><h2>MedNova Studio</h2>
+                  <p>交互式工作台，集中处理数据上传、任务选择、字段配置和脚本导出。</p>
+                </article><article class="hero-panel__card"><h2>MedNova Docs</h2>
+                  <p>函数说明、数据要求、工作台用法和常见问题统一收录在文档中心。</p>
+                </article><article class="hero-panel__card"><h2>MedNova Cases</h2>
+                  <p>按场景整理 PSM、Logistic、Cox、MR 和诊断模型的示例路径。</p>
+                </article><article class="hero-panel__card hero-panel__card--accent"><h2>启动方式</h2>
+                  <code>run_mednova_app()</code>
+                </article>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><section class="section-block"><div class="shell">
+        <div class="section-heading">
+          <span class="section-label">平台价值</span>
+          <h2>把医学研究中的任务配置、函数要求和代码输出放到同一条工作链上</h2>
+          <p>信息清晰、路径统一，适合在分析开始前快速完成方案整理和脚本准备。</p>
+        </div>
+        <div class="card-grid card-grid--three">
+          <article class="feature-card"><h3>从任务到流程</h3>
+            <p>按任务类型整理分析步骤，先确定工作路径，再组织脚本结构。</p>
+          </article><article class="feature-card"><h3>从输入到配置</h3>
+            <p>围绕当前任务展示所需字段，减少无关输入，方便逐项核对。</p>
+          </article><article class="feature-card"><h3>从函数到代码</h3>
+            <p>将统一入口函数、输入要求和流程步骤整合成一段可直接运行的 R 脚本。</p>
+          </article>
+</div>
+      </div>
+    </section><section class="section-block section-block--tint"><div class="shell">
+        <div class="section-heading">
+          <span class="section-label">平台能力</span>
+          <h2>当前支持的任务与输出模块</h2>
+          <p>平台以常见医学研究场景为主，优先提供清晰、稳定、可复核的脚本生成能力。</p>
+        </div>
+        <div class="card-grid card-grid--capability">
+          <article class="capability-card"><h3>倾向评分匹配</h3>
+            <p>组织匹配、平衡核对、baseline table 和 love plot 输出脚本。</p>
+          </article><article class="capability-card"><h3>Logistic 回归</h3>
+            <p>支持二分类结局建模、OR 输出与回归流程整理。</p>
+          </article><article class="capability-card"><h3>Cox 回归</h3>
+            <p>围绕时间列、事件列与预测变量生成生存分析脚本。</p>
+          </article><article class="capability-card"><h3>差异表达分析</h3>
+            <p>组织 Bulk RNA 的分组整理、过滤、limma 分析与结果查看。</p>
+          </article><article class="capability-card"><h3>孟德尔随机化</h3>
+            <p>连接 exposure / outcome 处理、协调和 MR 主流程。</p>
+          </article><article class="capability-card"><h3>诊断模型构建</h3>
+            <p>支持模型、性能输出与 ROC 相关结果组织。</p>
+          </article><article class="capability-card"><h3>可视化输出</h3>
+            <p>联动生成 love plot、forest plot、ROC 与火山图等常见图形脚本。</p>
+          </article>
+</div>
+      </div>
+    </section><section class="section-block"><div class="shell">
+        <div class="section-heading">
+          <span class="section-label">使用流程</span>
+          <h2>从上传数据到导出脚本，入口统一，路径清楚</h2>
+        </div>
+        <div class="process-grid">
+          <article class="process-card"><span class="process-card__index">1</span>
+            <h3>上传数据</h3>
+            <p>导入 `.csv`、`.tsv`、`.xlsx` 或 `.rds` 文件。</p>
+          </article><article class="process-card"><span class="process-card__index">2</span>
+            <h3>选择任务</h3>
+            <p>用任务类型决定当前工作流和需要显示的输入项。</p>
+          </article><article class="process-card"><span class="process-card__index">3</span>
+            <h3>配置当前任务输入</h3>
+            <p>只填写当前任务真正需要的列和参数。</p>
+          </article><article class="process-card"><span class="process-card__index">4</span>
+            <h3>核对函数输入</h3>
+            <p>查看主函数、当前映射与仍缺少的关键字段。</p>
+          </article><article class="process-card"><span class="process-card__index">5</span>
+            <h3>生成并下载 R 脚本</h3>
+            <p>导出完整脚本，进入项目环境继续人工复核与执行。</p>
+          </article>
+</div>
+      </div>
+    </section><section class="section-block section-block--preview"><div class="shell preview-layout">
+        <div class="preview-copy">
+          <span class="section-label">工作台预览</span>
+          <h2>平台首页与 Studio 工作台分工清楚，入口和使用界面各自独立</h2>
+          <p>
+            平台首页负责产品介绍和入口分流，Studio 负责任务配置、输入核对和代码输出。两张界面图分别展示平台门面和实际工作台，角色不会再混在一起。
+          </p>
+          <ul class="preview-list">
+<li>平台首页：展示定位、能力模块、使用流程和核心入口</li>
+            <li>左侧：数据文件、任务类型、任务备注与当前任务输入</li>
+            <li>中部：输入数据信息、函数处理流程、函数输入要求</li>
+            <li>右侧：完整 R 脚本、复制按钮和下载 `.R` 按钮</li>
+          </ul>
+<div class="button-row">
+            <a class="button button--primary" href="articles/mednova-studio.html">查看 Studio 说明</a>
+            <a class="button button--ghost" href="reference/run_mednova_app.html">查看启动方式</a>
+          </div>
+        </div>
+
+        <div class="preview-gallery">
+          <figure class="preview-tile" id="platform-preview-frame"><div class="preview-tile__badge">平台首页</div>
+            <img src="assets/images/platform-preview.png" alt="MedNova 平台首页截图" onerror="this.closest('.preview-tile').classList.add('preview-tile--missing');"><figcaption>平台首页预览图读取自 <code>docs/assets/images/platform-preview.png</code>。</figcaption><div class="preview-fallback" aria-hidden="true">
+              <strong>等待平台首页截图</strong>
+              <p>将平台首页截图保存为 <code>docs/assets/images/platform-preview.png</code> 后，这里会自动显示正式预览图。</p>
+            </div>
+          </figure><figure class="preview-tile" id="studio-preview-frame"><div class="preview-tile__badge">Studio 工作台</div>
+            <img src="assets/images/studio-preview.png" alt="MedNova Studio 工作台截图" onerror="this.closest('.preview-tile').classList.add('preview-tile--missing');"><figcaption>工作台预览图读取自 <code>docs/assets/images/studio-preview.png</code>。</figcaption><div class="preview-fallback" aria-hidden="true">
+              <strong>等待 Studio 截图</strong>
+              <p>将 Studio 工作台截图保存为 <code>docs/assets/images/studio-preview.png</code> 后，这里会自动显示正式预览图。</p>
+            </div>
+          </figure>
+</div>
+      </div>
+    </section><section class="section-block"><div class="shell">
+        <div class="cta-banner">
+          <div class="cta-banner__text">
+            <span class="section-label">开始使用</span>
+            <h2>从平台首页进入工作台、文档中心和教程案例</h2>
+            <p>首页负责产品介绍和入口分流，文档中心负责说明，Studio 负责配置与代码生成。</p>
+          </div>
+          <div class="button-row">
+            <a class="button button--primary" href="articles/mednova-studio.html">进入 Studio</a>
+            <a class="button button--ghost" href="articles/mednova-docs-center.html">查看文档中心</a>
+            <a class="button button--ghost" href="articles/mednova-cases.html">浏览教程案例</a>
+          </div>
+        </div>
+      </div>
+    </section></main><footer class="site-footer"><div class="shell site-footer__inner">
+      <div>
+        <strong>MedNova</strong>
+        <p>面向医学研究任务的智能分析平台</p>
+      </div>
+      <div class="site-footer__links">
+        <a href="articles/mednova-studio.html">Studio</a>
+        <a href="articles/mednova-docs-center.html">文档中心</a>
+        <a href="articles/mednova-cases.html">教程案例</a>
+        <a href="articles/mednova-faq.html">FAQ</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
