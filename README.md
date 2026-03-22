@@ -2,6 +2,11 @@
 
 MedNova 是一个面向医学研究任务的智能分析平台。
 
+## Online access / 在线入口
+
+- Platform: <https://edison-liang922.github.io/MedNova/>
+- Studio: <https://edison-liang.shinyapps.io/mednova-studio/>
+
 平台接收：
 
 - 用户提供的数据对象

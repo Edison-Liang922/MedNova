@@ -2,7 +2,7 @@
 % Please edit documentation in R/run_mednova_app.R
 \name{run_mednova_app}
 \alias{run_mednova_app}
-\title{启动 MedNova 平台}
+\title{启动 MedNova Studio}
 \usage{
 run_mednova_app(
   launch.browser = interactive(),
@@ -29,6 +29,5 @@ run_mednova_app(
 一个 \code{shiny.appobj}。
 }
 \description{
-启动统一的 MedNova Shiny 平台入口，在同一个应用中访问平台首页、
-平台介绍、Studio 工作台、函数与文档、教程案例和 FAQ。
+启动 MedNova Studio 工作台，用于配置任务输入并生成可执行的 R 脚本。
 }

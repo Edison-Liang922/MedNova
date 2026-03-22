@@ -688,7 +688,7 @@ mednova_generate_script <- function(task,
     psm_basic = c("MatchIt", "stats"),
     logistic_basic = c("stats"),
     cox_basic = c("survival", "stats"),
-    bulk_deg = c("DESeq2", "stats"),
+    bulk_deg = c("MedNova"),
     mr_basic = c("TwoSampleMR"),
     diagnostic_basic = c("pROC", "stats"),
     "stats"

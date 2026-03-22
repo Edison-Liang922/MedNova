@@ -3,23 +3,18 @@
 # - Bio_Bulk_align_group(): sample/group alignment
 # - Bio_Bulk_filter_low_expression(): low-expression filtering
 # - Bio_Bulk_limma_analysis(): reference DEG implementation
-# MedNova keeps a generic first-version template here and only uses the reference package as a catalog source.
+# MedNova keeps the first-version template aligned with the unified bulk entry.
 # Review the count matrix, sample metadata, and contrast before running.
 
 count_matrix <- {{COUNT_MATRIX_NAME}}
-col_data <- {{COL_DATA_NAME}}
+group_data <- {{COL_DATA_NAME}}
 
-dds <- DESeq2::DESeqDataSetFromMatrix(
-  countData = count_matrix,
-  colData = col_data,
-  design = stats::as.formula(paste("~", "{{DESIGN_TERM}}"))
+bulk_res <- med_bulk_deg(
+  counts = count_matrix,
+  group = group_data,
+  group_col = {{GROUP_COLUMN}},
+  case_name = {{CASE_LEVEL}},
+  control_name = {{CONTROL_LEVEL}}
 )
 
-dds <- DESeq2::DESeq(dds)
-
-deg_results <- DESeq2::results(
-  dds,
-  contrast = c({{GROUP_COLUMN}}, {{CASE_LEVEL}}, {{CONTROL_LEVEL}})
-)
-
-utils::head(as.data.frame(deg_results))
+utils::head(bulk_res$deg$results)

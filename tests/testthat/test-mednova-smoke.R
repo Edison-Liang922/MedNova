@@ -117,6 +117,44 @@ testthat::test_that("assistant can return and save the script only", {
   testthat::expect_match(script, "med_diagnostic_model\\(")
 })
 
+testthat::test_that("bulk DEG script generation does not require DESeq2", {
+  counts <- matrix(
+    c(
+      10, 12, 20, 22,
+      50, 48, 46, 45,
+      100, 102, 80, 78
+    ),
+    nrow = 3,
+    byrow = TRUE
+  )
+  rownames(counts) <- c("Gene1", "Gene2", "Gene3")
+  colnames(counts) <- c("S1", "S2", "S3", "S4")
+
+  group <- data.frame(group = c("Control", "Control", "Case", "Case"))
+  rownames(group) <- colnames(counts)
+
+  script <- mednova_generate_script(
+    task = list(
+      domain = "bulk_rna_differential_expression",
+      task_label = "bulk RNA differential expression",
+      template_id = "bulk_deg"
+    ),
+    data = counts,
+    spec = list(
+      group = "group",
+      group_data_name = "group_data",
+      case_level = "Case",
+      control_level = "Control"
+    ),
+    data_profile = mednova_inspect_data(counts, data_name = "count_matrix"),
+    assumptions = character()
+  )
+
+  testthat::expect_match(script, "library\\(MedNova\\)")
+  testthat::expect_match(script, "med_bulk_deg\\(")
+  testthat::expect_false(grepl("DESeq2", script, fixed = TRUE))
+})
+
 testthat::test_that("explicit data_name overrides spec data_name", {
   example_data <- data.frame(
     outcome = c(1, 0, 1),

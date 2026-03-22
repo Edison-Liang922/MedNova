@@ -1,7 +1,6 @@
-#' 启动 MedNova 平台
+#' 启动 MedNova Studio
 #'
-#' 启动统一的 MedNova Shiny 平台入口，在同一个应用中访问平台首页、
-#' 平台介绍、Studio 工作台、函数与文档、教程案例和 FAQ。
+#' 启动 MedNova Studio 工作台，用于配置任务输入并生成可执行的 R 脚本。
 #'
 #' @param launch.browser 是否在浏览器中打开应用。
 #' @param host 传递给 [shiny::runApp()] 的 host。
@@ -18,25 +17,17 @@ run_mednova_app <- function(launch.browser = interactive(),
                             port = NULL,
                             display.mode = c("auto", "normal", "showcase"),
                             return_app = FALSE) {
-  if (!requireNamespace("shiny", quietly = TRUE)) {
-    stop("运行 MedNova Studio 需要安装 `shiny` 包。", call. = FALSE)
-  }
-  if (!requireNamespace("bslib", quietly = TRUE)) {
-    stop("运行 MedNova Studio 需要安装 `bslib` 包。", call. = FALSE)
-  }
-  if (!requireNamespace("DT", quietly = TRUE)) {
-    stop("运行 MedNova Studio 需要安装 `DT` 包。", call. = FALSE)
-  }
+  .mednova_require_app_packages()
 
   display.mode <- match.arg(display.mode)
-  app_dir <- .mednova_resource_path("app")
+  app <- .mednova_studio_app()
 
   if (isTRUE(return_app)) {
-    return(shiny::shinyAppDir(appDir = app_dir))
+    return(app)
   }
 
   shiny::runApp(
-    appDir = app_dir,
+    app,
     launch.browser = launch.browser,
     host = host,
     port = port,
